@@ -64,3 +64,5 @@ npm run
 ```
 
 🎉 **Congratulations! Your Character.ai Discord bot is ready to use!**
+
+🗒️: The [Character.ai](https://character.ai/) always updating their authorization methods, please adjust it using the newest auth method.
