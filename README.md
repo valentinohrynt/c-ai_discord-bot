@@ -59,6 +59,7 @@ First, enable **Developer Mode** in your Discord settings. [Find the guide here]
 After filling out all fields in `config.js`, open your terminal and run:
 
 ```bash
+npm init
 npm install
 npm run
 ```
