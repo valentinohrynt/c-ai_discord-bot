@@ -20,7 +20,7 @@ First, enable **Developer Mode** in your Discord settings. [Find the guide here]
 1. Go to the [Discord Developer Portal](https://discord.com/developers/applications), then click **New Application**.
 2. After creating the application, you’ll be directed to another page. Open the sidebar and select **Bot**.
 3. Click **Reset Token** and copy the token provided.
-4. Paste this token into `config.js` under the `token` field.
+4. Paste this token into `config.js` in the `token` field.
 
 ---
 
@@ -30,7 +30,7 @@ First, enable **Developer Mode** in your Discord settings. [Find the guide here]
 2. Search for the character you want to add as a Discord bot.
 3. Start a new chat with this character.
 4. Look at the URL; it should look like this: `https://character.ai/chat/hM_RvwjQNyfjhUnru82iHW73goUKGPsDmBX63y7JfXA`. Copy the string after `chat/` (e.g., `hM_RvwjQNyfjhUnru82iHW73goUKGPsDmBX63y7JfXA`).
-5. Paste it into `config.js` under the `characterID` field.
+5. Paste it into `config.js` in the `characterID` field.
 
 ---
 
@@ -41,7 +41,7 @@ First, enable **Developer Mode** in your Discord settings. [Find the guide here]
 3. Navigate to the **Network** tab. If prompted, press **Ctrl + R** to reload the page.
 4. Use the search tool (🔍 magnifying glass icon) to search for **`authorization: Token`**.
 5. Click one of the search results and copy the string after **Token**.
-6. Paste this into `config.js` under the `authToken` field.
+6. Paste this into `config.js` in the `authToken` field.
 
 ---
 
@@ -50,7 +50,7 @@ First, enable **Developer Mode** in your Discord settings. [Find the guide here]
 1. Open the Discord server where you want the bot to interact.
 2. Go to the text channel where the bot will be active.
 3. Right-click on the channel and select **Copy Channel ID**.
-4. Paste it into `config.js` under the `chatID` field.
+4. Paste it into `config.js` in the `chatID` field.
 
 ---
 
