@@ -2,13 +2,13 @@
     "dependencies": {
         "chromium": "^3.0.3",
         "discord.js": "^14.16.3",
-        "node_characterai": "^1.1.0",
+        "node_characterai": "^1.2.7",
         "nodemon": "^3.1.7",
-        "semver": "^7.6.3",
+        "semver": "^7.5.4",
         "undici": "^6.20.1"
     },
     "name": "character.ai",
-    "version": "1.2.7",
+    "version": "2.0.0",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
