@@ -7,7 +7,7 @@ const characterAI = new CharacterAI();
 
 client.once("ready", async () => {
     console.log(`${client.user.username} is online.`);
-    client.user.setPresence({ activities: [{ name: `with my beloved, Inoo`, type: ActivityType.Playing }], status: 'online' })
+    client.user.setPresence({ activities: [{ name: `mention or tag me to talk!`, type: ActivityType.Playing }], status: 'online' })
 });
 
 client.on("messageCreate", async message => {
@@ -17,8 +17,8 @@ client.on("messageCreate", async message => {
     if (!message.channel.id == config.chatID) return
 
     // You can un-comment codes below to make the bot only respond if you tag/mention it.
-    // if (!message.mentions.users.first()) return
-    // if (message.mentions.users.first().id !== client.user.id) return 
+    if (!message.mentions.users.first()) return
+    if (message.mentions.users.first().id !== client.user.id) return 
 
     var msgText = message.content.split(" ").slice(1).join(" ");
     if (!msgText) return
