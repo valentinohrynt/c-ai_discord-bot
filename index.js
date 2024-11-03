@@ -13,14 +13,14 @@ client.once("ready", async () => {
 client.on("messageCreate", async message => {
     if (message.author.bot) return;
 
-    // This one is for stricting the bot, so it will only can send message inside a text channel that have been set inside config.json
-    if (!message.channel.id == config.chatID) return
+    if (message.channel.id !== config.chatID){
+        if(!message.mentions.has(client.user)) return;
+    } 
 
-    // You can un-comment codes below to make the bot only respond if you tag/mention it.
-    if (!message.mentions.users.first()) return
-    if (message.mentions.users.first().id !== client.user.id) return 
+    const msgText = message.mentions.has(client.user) 
+        ? message.content.split(" ").slice(1).join(" ")
+        : message.content;
 
-    var msgText = message.content.split(" ").slice(1).join(" ");
     if (!msgText) return
 
     message.channel.sendTyping();
@@ -31,7 +31,6 @@ client.on("messageCreate", async message => {
         }
 
         const chat = await characterAI.createOrContinueChat(config.characterID);
-
         const response = await chat.sendAndAwaitResponse(`${msgText}`, true);
 
         return response
