@@ -1,5 +1,11 @@
 const { Client, GatewayIntentBits, ActivityType } = require("discord.js");
-const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.MessageContent, GatewayIntentBits.GuildMessages] });
+const client = new Client({
+    intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.MessageContent
+    ]
+});
 
 const config = require("./config.json");
 const CharacterAI = require('node_characterai');
@@ -13,7 +19,7 @@ client.once("ready", async () => {
 client.on("messageCreate", async message => {
     if (message.author.bot) return;
 
-    if (!config.chatIDs.includes(message.channel.id)) {
+    if (!config.chatID == message.channel.id) {
         if (!message.mentions.has(client.user)) return;
     }
 
@@ -32,13 +38,13 @@ client.on("messageCreate", async message => {
 
         const chat = await characterAI.createOrContinueChat(config.characterID);
         const response = await chat.sendAndAwaitResponse(`${msgText}`, true);
-
-        return response;
+    
+        return { text: response.text };
     }
 
     try {
-        let response = await aiMSG();
-        message.reply(`${response.text}`);
+        let { text } = await aiMSG();
+        await message.reply(`${text}`);
     } catch (error) {
         console.log(error);
         await message.reply("There was a problem handling the command.");

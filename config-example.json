@@ -2,9 +2,5 @@
     "token":"YOUR_DISCORD_BOT_TOKEN",
     "characterID":"CHARACTER_AI_ID_IN_CHARACTER_AI_WEBSITE",
     "authToken": "YOUR_AUTH_TOKEN_IN_CHARACTER_AI_WEBSITE",
-    "chatIDs": [
-        "YOUR_DISCORD_TEXT_CHANNEL_ID_1",
-        "YOUR_DISCORD_TEXT_CHANNEL_ID_2",
-        "AND MORE"
-    ]
+    "chatID": "YOUR_DISCORD_TEXT_CHANNEL_ID"
 }
