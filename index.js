@@ -19,10 +19,11 @@ client.once("ready", async () => {
 client.on("messageCreate", async message => {
     if (message.author.bot) return;
 
-    if (!config.chatID == message.channel.id) {
-        if (!message.mentions.has(client.user)) return;
+    if (config.chatID !== message.channel.id) {
+        if (!message.mentions.users.first()) return
+        if (message.mentions.users.first().id !== client.user.id) return 
     }
-
+    
     const msgText = message.mentions.has(client.user)
         ? message.content.split(" ").slice(1).join(" ")
         : message.content;
