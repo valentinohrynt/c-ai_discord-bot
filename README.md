@@ -1,4 +1,4 @@
-# 🤖 Creating a Character.ai Discord Bot
+# 🤖 Creating a Character.ai Discord Bot [DEPRECATED]
 
 ## 🚀 Requirements
 - ✅ Node.js environment on your PC or laptop
